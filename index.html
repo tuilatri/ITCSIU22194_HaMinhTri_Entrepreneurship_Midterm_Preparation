@@ -30,6 +30,7 @@
         .quiz-header {
             text-align: center;
             margin-bottom: 30px;
+            position: relative;
         }
 
         .quiz-header__title {
@@ -68,11 +69,6 @@
             margin-bottom: 15px;
         }
 
-        .question__required {
-            color: #d93025;
-            margin-left: 5px;
-        }
-
         .option {
             display: flex;
             align-items: center;
@@ -88,6 +84,16 @@
         .option__label {
             font-size: 14px;
             color: #3c4043;
+        }
+
+        .option__label--correct {
+            color: #0d652d;
+            font-weight: 500;
+        }
+
+        .option__label--incorrect {
+            color: #d33426;
+            font-weight: 500;
         }
 
         .form-actions {
@@ -215,16 +221,28 @@
             const errorMessage = document.getElementById('errorMessage');
             const formActions = document.getElementById('formActions');
 
-            let quizData = []; 
+            let quizData = [];
+            let currentQuestionOrder = [];
+
+            // Fisher-Yates shuffle algorithm
+            function shuffleArray(array) {
+                const newArray = [...array];
+                for (let i = newArray.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+                }
+                return newArray;
+            }
 
             async function loadQuizData() {
                 try {
-                    const response = await fetch('./questions.json'); 
+                    const response = await fetch('questions.json');
                     if (!response.ok) {
                         throw new Error(`HTTP error! status: ${response.status}`);
                     }
                     quizData = await response.json();
-
+                    currentQuestionOrder = Array.from({length: quizData.length}, (_, i) => i);
+                    
                     loadingIndicator.style.display = 'none';
                     quizForm.style.display = 'block';
                     formActions.style.display = 'flex';
@@ -241,19 +259,20 @@
             function renderQuiz() {
                 quizForm.innerHTML = '';
                 
-                quizData.forEach((questionData, index) => {
+                currentQuestionOrder.forEach((questionIndex, displayIndex) => {
+                    const questionData = quizData[questionIndex];
                     const questionElement = document.createElement('div');
                     questionElement.className = 'question';
-                    questionElement.id = `question-${index}`;
+                    questionElement.id = `question-${questionIndex}`;
                     
                     const questionText = document.createElement('div');
                     questionText.className = 'question__text';
-                    questionText.textContent = `${index + 1}. ${questionData.question}`;
+                    questionText.textContent = `${displayIndex + 1}. ${questionData.question}`;
                     
                     questionElement.appendChild(questionText);
                     
                     questionData.options.forEach((option, optionIndex) => {
-                        const optionId = `q${index}-option${optionIndex}`;
+                        const optionId = `q${questionIndex}-option${optionIndex}`;
                         
                         const optionContainer = document.createElement('div');
                         optionContainer.className = 'option';
@@ -261,7 +280,7 @@
                         const input = document.createElement('input');
                         input.type = 'radio';
                         input.className = 'option__input';
-                        input.name = `question-${index}`;
+                        input.name = `question-${questionIndex}`;
                         input.id = optionId;
                         input.value = option;
                         
@@ -269,6 +288,7 @@
                         label.className = 'option__label';
                         label.htmlFor = optionId;
                         label.textContent = option;
+                        label.dataset.optionValue = option;
                         
                         optionContainer.appendChild(input);
                         optionContainer.appendChild(label);
@@ -279,13 +299,33 @@
                 });
             }
 
+            function highlightAnswers(questionIndex, selectedOption, correctAnswer) {
+                const questionElement = document.getElementById(`question-${questionIndex}`);
+                const optionLabels = questionElement.querySelectorAll('.option__label');
+                
+                optionLabels.forEach(label => {
+                    label.classList.remove('option__label--correct', 'option__label--incorrect');
+                    
+                    if (label.dataset.optionValue === correctAnswer) {
+                        label.classList.add('option__label--correct');
+                    }
+                    
+                    if (selectedOption && label.dataset.optionValue === selectedOption.value && selectedOption.value !== correctAnswer) {
+                        label.classList.add('option__label--incorrect');
+                    }
+                });
+            }
+
             function showResults() {
                 let score = 0;
                 resultsDetails.innerHTML = '';
                 
-                quizData.forEach((questionData, index) => {
-                    const questionElement = document.getElementById(`question-${index}`);
-                    const selectedOption = document.querySelector(`input[name="question-${index}"]:checked`);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                
+                currentQuestionOrder.forEach((questionIndex, displayIndex) => {
+                    const questionData = quizData[questionIndex];
+                    const questionElement = document.getElementById(`question-${questionIndex}`);
+                    const selectedOption = document.querySelector(`input[name="question-${questionIndex}"]:checked`);
                     
                     questionElement.classList.remove('question--correct', 'question--incorrect');
                     
@@ -299,13 +339,15 @@
                             questionElement.classList.add('question--incorrect');
                         }
                         
+                        highlightAnswers(questionIndex, selectedOption, questionData.correctAnswer);
+                        
                         const resultDetail = document.createElement('div');
                         resultDetail.className = 'question';
                         resultDetail.classList.add(isCorrect ? 'question--correct' : 'question--incorrect');
                         
                         const resultText = document.createElement('div');
                         resultText.className = 'question__text';
-                        resultText.textContent = `${index + 1}. ${questionData.question}`;
+                        resultText.textContent = `${displayIndex + 1}. ${questionData.question}`;
                         
                         const userAnswer = document.createElement('p');
                         userAnswer.textContent = `Your answer: ${selectedOption.value}`;
@@ -325,13 +367,14 @@
                         resultsDetails.appendChild(resultDetail);
                     } else {
                         questionElement.classList.add('question--incorrect');
+                        highlightAnswers(questionIndex, null, questionData.correctAnswer);
                         
                         const resultDetail = document.createElement('div');
                         resultDetail.className = 'question question--incorrect';
                         
                         const resultText = document.createElement('div');
                         resultText.className = 'question__text';
-                        resultText.textContent = `${index + 1}. ${questionData.question}`;
+                        resultText.textContent = `${displayIndex + 1}. ${questionData.question}`;
                         
                         const noAnswer = document.createElement('p');
                         noAnswer.textContent = 'You did not answer this question.';
@@ -353,17 +396,29 @@
                 scoreDisplay.textContent = score;
                 totalQuestionsDisplay.textContent = quizData.length;
                 resultsContainer.style.display = 'block';
-                
-                resultsContainer.scrollIntoView({ behavior: 'smooth' });
             }
 
             function resetForm() {
+                // Shuffle the question order
+                currentQuestionOrder = shuffleArray(Array.from({length: quizData.length}, (_, i) => i));
+                
+                // Re-render the quiz with new order
+                renderQuiz();
+                
+                // Reset form state
                 quizForm.reset();
                 resultsContainer.style.display = 'none';
                 
-                quizData.forEach((_, index) => {
-                    const questionElement = document.getElementById(`question-${index}`);
-                    questionElement.classList.remove('question--correct', 'question--incorrect');
+                // Clear any answer highlighting
+                currentQuestionOrder.forEach(questionIndex => {
+                    const questionElement = document.getElementById(`question-${questionIndex}`);
+                    if (questionElement) {
+                        questionElement.classList.remove('question--correct', 'question--incorrect');
+                        const optionLabels = questionElement.querySelectorAll('.option__label');
+                        optionLabels.forEach(label => {
+                            label.classList.remove('option__label--correct', 'option__label--incorrect');
+                        });
+                    }
                 });
             }
 

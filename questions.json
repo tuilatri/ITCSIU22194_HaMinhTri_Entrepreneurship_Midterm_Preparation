@@ -1,207 +1,412 @@
 [
     {
-        "question": "What is the capital of France?",
-        "options": ["London", "Paris", "Berlin", "Madrid"],
-        "correctAnswer": "Paris"
+        "question": "3.1.1. What are entrepreneurs motivated by?",
+        "options": [
+            "Stability and routine",
+            "Social connections and leisure",
+            "Achievement, independence, and the accumulation of wealth",
+            "Avoiding risks and maintaining the status quo/the current state of things"
+        ],
+        "correctAnswer": "Achievement, independence, and the accumulation of wealth"
     },
     {
-        "question": "Which planet is known as the Red Planet?",
-        "options": ["Venus", "Mars", "Jupiter", "Saturn"],
-        "correctAnswer": "Mars"
+        "question": "3.1.2. Which of the following best describes a characteristic of entrepreneurs?",
+        "options": [
+            "They are risk-averse and prefer stability.",
+            "They are highly motivated and take risks to achieve goals.",
+            "They focus on maintaining the current state of affairs.",
+            "They typically avoid challenges and complex problems."
+        ],
+        "correctAnswer": "They are highly motivated and take risks to achieve goals."
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.1.3. For an entrepreneur, what is a challenge?",
+        "options": [
+            "A problem that requires innovative solutions",
+            "A call to respond to a difficult task and commit to an enterprise",
+            "An obstacle that prevents business growth",
+            "A competitive threat from other companies"
+        ],
+        "correctAnswer": "A call to respond to a difficult task and commit to an enterprise"
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.1.4. What are the key abilities of entrepreneurs?",
+        "options": [
+            "To see opportunities, gather resources, and take action",
+            "To make profits, hire employees, and expand globally",
+            "To create products, market them, and sell to customers",
+            "To raise capital, manage teams, and scale operations"
+        ],
+        "correctAnswer": "To see opportunities, gather resources, and take action"
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.1.5. What is one key characteristic that distinguishes an entrepreneur from a small business owner?",
+        "options": [
+            "An entrepreneur acts on an existing business model.",
+            "An entrepreneur identifies and acts on a new idea or problem.",
+            "An entrepreneur primarily owns a restaurant.",
+            "An entrepreneur follows a traditional business model."
+        ],
+        "correctAnswer": "An entrepreneur identifies and acts on a new idea or problem."
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.1.6. Which statement best summarizes the relationship between a small business owner and an entrepreneur?",
+        "options": [
+            "A small business owner can never be an entrepreneur.",
+            "An entrepreneur always has to start a completely new company.",
+            "Entrepreneurship and small business ownership are completely unrelated.",
+            "A small business owner and an entrepreneur can be the same person if they introduce a new product or service."
+        ],
+        "correctAnswer": "A small business owner and an entrepreneur can be the same person if they introduce a new product or service."
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.1.7. Why might someone who prefers to stay in their comfort zone struggle in entrepreneurship?",
+        "options": [
+            "It encourages creativity and innovation.",
+            "It prevents them from facing and overcoming challenges.",
+            "It indicates they are ready for high risks.",
+            "It shows they have all necessary comfort for hard work."
+        ],
+        "correctAnswer": "It prevents them from facing and overcoming challenges."
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.1.8. What is the journey of an entrepreneur?",
+        "options": [
+            "Entrepreneurs quickly become successful without much effort.",
+            "Entrepreneurs should only attempt one business venture.",
+            "Failure is not a significant part of the entrepreneurial journey.",
+            "Entrepreneurship requires perseverance through failures and hard work."
+        ],
+        "correctAnswer": "Entrepreneurship requires perseverance through failures and hard work."
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.2.1. Which of the following characteristics would indicate that someone should not be an entrepreneur?",
+        "options": [
+            "Willing to work long hours.",
+            "Entrepreneurs are vision-oriented and take moderate risks to achieve high earnings.",
+            "Enjoys finding solutions for everyday problems.",
+            "Prefers staying in their comfort zone."
+        ],
+        "correctAnswer": "Prefers staying in their comfort zone."
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.2.2. What is a common reason many entrepreneurs give up or fail?",
+        "options": [
+            "Creativity.",
+            "Lack of funds.",
+            "Satisfied with initial success.",
+            "Too much acknowledgement."
+        ],
+        "correctAnswer": "Lack of funds."
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.2.3. What is one approach that startup entrepreneurs use to minimize personal financial risk while developing their venture?",
+        "options": [
+            "Continue their current employment while working on the venture on the side until it generates income.",
+            "Secure a large loan from a bank to fully fund the venture from the start.",
+            "Quit their current employment to focus exclusively on the new venture.",
+            "Rely solely on investments from friends and family to fund the venture."
+        ],
+        "correctAnswer": "Continue their current employment while working on the venture on the side until it generates income."
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.2.4. Which of the following statements best describes a characteristic of entrepreneurs?",
+        "options": [
+            "Primary rely on fate or luck to achieve success.",
+            "Are vision-oriented and take moderate risks to achieve high earnings.",
+            "Generally avoid risks and seek stable returns.",
+            "Prefer working alone and avoiding ambiguous situations."
+        ],
+        "correctAnswer": "Are vision-oriented and take moderate risks to achieve high earnings."
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.2.5. What is essential for an entrepreneur when facing challenges?",
+        "options": [
+            "Expecting easy solutions for complex problems.",
+            "Avoiding tough issues to maintain productivity.",
+            "Having a willingness to work hard and not expect easy solutions.",
+            "Relying solely on tuition over skill development."
+        ],
+        "correctAnswer": "Having a willingness to work hard and not expect easy solutions."
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.2.6. What factors contribute to a growing interest in entrepreneurship? (Select all that apply)",
+        "options": [
+            "Unemployment levels.",
+            "Low job turnover rates.",
+            "Increasing levels of creativity.",
+            "Decreasing rates of discrimination."
+        ],
+        "correctAnswer": ["Unemployment levels.", "Increasing levels of creativity."]
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.2.7. An entrepreneur is someone who ... (Select all that apply)",
+        "options": [
+            "Creates a small business based on other existing businesses.",
+            "Creates a business that sells products available via other retailers.",
+            "Creates a business around the idea of solving a problem.",
+            "Is highly creative."
+        ],
+        "correctAnswer": ["Creates a business around the idea of solving a problem.", "Is highly creative."]
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.2.8. The acronym SMART for goal setting stands for ...",
+        "options": [
+            "short-term, measurable, accurate, relevant, and timely",
+            "specific, measurable, accurate, relevant, and timely",
+            "specific, measurable, achievable, relevant and timely",
+            "specific, measurable, achievable, results, and time oriented"
+        ],
+        "correctAnswer": "specific, measurable, achievable, relevant and timely"
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.2.9. Which of the following is NOT a 'pull' influence that attracts individuals towards small business ownership?",
+        "options": [
+            "Desire for independence",
+            "Desire to exploit an opportunity",
+            "Job dissatisfaction",
+            "Turning a hobby into a business"
+        ],
+        "correctAnswer": "Job dissatisfaction"
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.2.10. Which of the following is NOT mentioned as a factor that pushes people into founding a new enterprise?",
+        "options": [
+            "Redundancy",
+            "Idleness",
+            "Unemployment",
+            "Financial surplus"
+        ],
+        "correctAnswer": "Financial surplus"
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.2.11. One reason people find entrepreneurship attractive is because",
+        "options": [
+            "Guarantees financial stability",
+            "They have control overall decisions and bear the risk for decisions",
+            "It requires less effort than working for others",
+            "It provides immediate success and recognition"
+        ],
+        "correctAnswer": "They have control overall decisions and bear the risk for decisions"
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.2.12. What issue is likely to arise if an entrepreneurial venture has multiple owners?",
+        "options": [
+            "Increased initial investment leading to higher profit margins.",
+            "Disagreement between the owners, potentially limiting the operation",
+            "Absolute certainty of income and financial stability.",
+            "Entrepreneurs will have vast experience leading to high efficiency."
+        ],
+        "correctAnswer": "Disagreement between the owners, potentially limiting the operation"
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.2.13. In the early stages of developing an entrepreneurial venture, the entrepreneur might seek funding from which group? (Select all that apply)",
+        "options": [
+            "Venture capitalists",
+            "the local bank",
+            "friends and family",
+            "shark tank"
+        ],
+        "correctAnswer": ["Venture capitalists", "the local bank", "friends and family"]
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.3.1. What are the three key abilities of entrepreneurs?",
+        "options": [
+            "To see opportunities, gather resources, and take action.",
+            "To make profits, hire employees, and expand globally.",
+            "To create products, market them, and sell to customers.",
+            "To raise capital, manage teams, and scale operations."
+        ],
+        "correctAnswer": "To see opportunities, gather resources, and take action."
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.3.2. What are entrepreneurs motivated by?",
+        "options": [
+            "Stability and routine",
+            "Social connections and leisure",
+            "Achievement, independence, and the accumulation of wealth",
+            "Avoiding risks and maintaining the status quo/the current state of things"
+        ],
+        "correctAnswer": "Achievement, independence, and the accumulation of wealth"
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.3.3. What is a common reason many entrepreneurs give up or fail?",
+        "options": [
+            "Lack of creativity",
+            "Lack of funds",
+            "Satisfied with initial success",
+            "Too much acknowledgment"
+        ],
+        "correctAnswer": "Lack of funds"
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.3.4. Which of the following is highlighted as a characteristic of someone who should reconsider becoming an entrepreneur?",
+        "options": [
+            "Tending to procrastinate",
+            "Enjoying challenges and taking risks",
+            "Seeking long-term growth and stability",
+            "Being innovative and proactive"
+        ],
+        "correctAnswer": "Tending to procrastinate"
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.3.5. What primarily motivates an Achievement Entrepreneur?",
+        "options": [
+            "Customer satisfaction",
+            "Personal and professional fulfillment",
+            "Market demand",
+            "Technological innovation"
+        ],
+        "correctAnswer": "Personal and professional fulfillment"
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.3.6. What is the primary focus of a Salesman Entrepreneur?",
+        "options": [
+            "Innovation and technical advancements",
+            "Operational efficiency and management",
+            "Personal accomplishment",
+            "Sales and customer relationships"
+        ],
+        "correctAnswer": "Sales and customer relationships"
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.3.7. Which characteristic is typical of a manager type of entrepreneur?",
+        "options": [
+            "Prefers small startups",
+            "Takes calculated risks",
+            "Avoids positions of authority",
+            "Has strong management skills"
+        ],
+        "correctAnswer": "Has strong management skills"
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.3.8. What defines an entrepreneurial idea?",
+        "options": [
+            "A problem in the market that is currently unmet.",
+            "A potential solution or concept that an entrepreneur thinks of.",
+            "A commercial framework for implementing a solution.",
+            "A planned scheme for securing funding."
+        ],
+        "correctAnswer": "A potential solution or concept that an entrepreneur thinks of."
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.3.9. A local bakery notices a significant increase in demand for gluten-free products and decides to expand its menu to include a range of gluten-free baked goods. This is an example of:",
+        "options": [
+            "Idea",
+            "Opportunity",
+            "Both",
+            "Neither"
+        ],
+        "correctAnswer": "Opportunity"
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.4.1. What is the first stage of the entrepreneurial process?",
+        "options": [
+            "Development",
+            "Startup",
+            "Market Entry",
+            "Growth"
+        ],
+        "correctAnswer": "Development"
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.4.2. Which of the following best describes the 'Resourcing' stage?",
+        "options": [
+            "Evaluating and gathering the necessary resources.",
+            "Defining the opportunity and developing the concept.",
+            "Entering the market with a soft launch.",
+            "Monitoring growth and making improvements."
+        ],
+        "correctAnswer": "Evaluating and gathering the necessary resources."
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.4.3. What is a 'soft launch'?",
+        "options": [
+            "A full-scale market entry",
+            "A limited market entry to test the business",
+            "The final stage before exiting the venture",
+            "The development of a business model"
+        ],
+        "correctAnswer": "A limited market entry to test the business"
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.4.4. The 'Harvest' stage in an entrepreneurial journey signifies:",
+        "options": [
+            "Developing a new business idea",
+            "Gathering resources for business growth",
+            "Entering a new market",
+            "Harvesting returns on investment and planning for exit"
+        ],
+        "correctAnswer": "Harvesting returns on investment and planning for exit"
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.4.5. An entrepreneurial mindset is described as a combination of:",
+        "options": [
+            "Skillset and mindset",
+            "Vision and strategy",
+            "Knowledge and experience",
+            "Passion and resources"
+        ],
+        "correctAnswer": "Skillset and mindset"
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.4.6. Why is mentorship considered critical for entrepreneurs?",
+        "options": [
+            "It is mandatory in all industries",
+            "Mentorship provides assurance and valuable networking opportunities",
+            "It guarantees immediate success",
+            "It replaces the need for a co-founder"
+        ],
+        "correctAnswer": "Mentorship provides assurance and valuable networking opportunities"
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.4.7. An example of leveraging technology to skip middlemen is:",
+        "options": [
+            "Launching a franchise",
+            "Renting an office space",
+            "Using a website for travel bookings",
+            "Hiring new employees"
+        ],
+        "correctAnswer": "Using a website for travel bookings"
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.4.8. What is the main advantage of purchasing an existing business?",
+        "options": [
+            "Immediate financial gains",
+            "Established historical financial data and managed decisions",
+            "Lower initial investment",
+            "No need for market research"
+        ],
+        "correctAnswer": "Established historical financial data and managed decisions"
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.4.9. What is a significant benefit of observing social dialogue for entrepreneurs?",
+        "options": [
+            "It leads to immediate profit",
+            "It provides insights into customer needs and market gaps",
+            "It eliminates the need for further market research",
+            "It ensures a high rate of business failure"
+        ],
+        "correctAnswer": "It provides insights into customer needs and market gaps"
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.4.10. What should be a key consideration in the 'Solution Assessment' phase?",
+        "options": [
+            "The uniqueness and protectability of the solution",
+            "The overall cost of the solution",
+            "The solution's ability to be easily replicated",
+            "The size of the startup team"
+        ],
+        "correctAnswer": "The uniqueness and protectability of the solution"
     },
     {
-        "question": "What is the largest mammal?",
-        "options": ["Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
-        "correctAnswer": "Blue Whale"
+        "question": "3.4.11. Why is it important to conduct real-world validation before launching a startup idea?",
+        "options": [
+            "To secure immediate funding",
+            "To avoid marketing efforts",
+            "To ensure the idea aligns with market needs and demands",
+            "To guarantee a perfect product launch"
+        ],
+        "correctAnswer": "To ensure the idea aligns with market needs and demands"
     }
 ]
