@@ -1,425 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITCSIU22194 - Ha Minh Tri - Entrepreneurship - Midterm - Preparation</title>
-    <link rel="shortcut icon" href="./images/iu_logo_favicon.png">
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Roboto', Arial, sans-serif;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ITCSIU22194 - Ha Minh Tri - Entrepreneurship - Midterm - Preparation</title>
+        <link rel="shortcut icon" href="./images/iu_logo_favicon.png">
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                font-family: 'Roboto', Arial, sans-serif;
+            }
 
-        body {
-            background-color: #f5f5f5;
-            padding: 20px;
-            line-height: 1.6;
-        }
+            body {
+                background-color: #f5f5f5;
+                padding: 20px;
+                line-height: 1.6;
+            }
 
-        .form-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .quiz-header {
-            text-align: center;
-            margin-bottom: 30px;
-            position: relative;
-        }
-
-        .quiz-header__title {
-            color: #202124;
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .quiz-header__description {
-            color: #5f6368;
-            font-size: 14px;
-            margin-bottom: 5px;
-        }
-
-        .quiz-score-display {
-            font-size: 16px;
-            font-weight: 500;
-            color: #1a73e8;
-            margin-top: 10px;
-            display: none;
-        }
-
-        .pdf-container {
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        .pdf-embed {
-            width: 100%;
-            height: 500px;
-            border: 1px solid #dadce0;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            margin-top: 20px;
-        }
-
-        .pdf-title {
-            font-size: 16px;
-            font-weight: 500;
-            margin-bottom: 10px;
-            color: #202124;
-        }
-
-        .question {
-            margin-bottom: 25px;
-            padding: 20px;
-            border: 1px solid #dadce0;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-
-        .question--correct {
-            border-left: 4px solid #34a853;
-            background-color: #e6f4ea;
-        }
-
-        .question--incorrect {
-            border-left: 4px solid #ea4335;
-            background-color: #fce8e6;
-        }
-
-        .question__text {
-            font-size: 16px;
-            font-weight: 500;
-            color: #202124;
-            margin-bottom: 15px;
-        }
-
-        .option {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-            padding: 8px;
-            border-radius: 4px;
-        }
-
-        .option--correct {
-            background-color: #e6f4ea;
-        }
-
-        .option--incorrect {
-            background-color: #fce8e6;
-        }
-
-        .option__input {
-            margin-right: 10px;
-            width: 16px;
-            height: 16px;
-        }
-
-        .option__label {
-            font-size: 14px;
-            color: #3c4043;
-            transition: all 0.3s ease;
-        }
-
-        .option__label--correct {
-            color: #0d652d;
-            font-weight: 500;
-        }
-
-        .option__label--incorrect {
-            color: #d33426;
-            font-weight: 500;
-        }
-
-        .form-actions {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 30px;
-        }
-
-        .button {
-            padding: 10px 24px;
-            border-radius: 4px;
-            font-size: 14px;
-            font-weight: 500;
-            cursor: pointer;
-            border: none;
-            transition: background-color 0.3s;
-        }
-
-        .button--submit {
-            background-color: #1a73e8;
-            color: white;
-        }
-
-        .button--submit:hover {
-            background-color: #1765cc;
-        }
-
-        .button--reset {
-            background-color: #f1f3f4;
-            color: #3c4043;
-        }
-
-        .button--reset:hover {
-            background-color: #e8eaed;
-        }
-
-        .loading {
-            text-align: center;
-            padding: 20px;
-            font-size: 18px;
-            color: #5f6368;
-        }
-
-        .error-message {
-            color: #d93025;
-            text-align: center;
-            padding: 20px;
-            font-size: 16px;
-        }
-
-        @media (max-width: 600px) {
             .form-container {
-                padding: 15px;
+                max-width: 800px;
+                margin: 0 auto;
+                background: white;
+                padding: 30px;
+                border-radius: 8px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             }
 
-            .form-actions {
-                flex-direction: column;
+            .quiz-header {
+                text-align: center;
+                margin-bottom: 30px;
+                position: relative;
             }
 
-            .button {
-                width: 100%;
+            .quiz-header__title {
+                color: #202124;
+                font-size: 24px;
                 margin-bottom: 10px;
             }
 
+            .quiz-header__description {
+                color: #5f6368;
+                font-size: 14px;
+                margin-bottom: 5px;
+            }
+
+            .quiz-score-display {
+                font-size: 16px;
+                font-weight: 500;
+                color: #1a73e8;
+                margin-top: 10px;
+                display: none;
+            }
+
+            .pdf-container {
+                margin: 20px 0;
+                text-align: center;
+            }
+
             .pdf-embed {
-                height: 300px;
+                width: 100%;
+                height: 500px;
+                border: 1px solid #dadce0;
+                border-radius: 8px;
+                margin-bottom: 20px;
+                margin-top: 20px;
             }
-        }
-    </style>
-</head>
-<body>
-    <div class="form-container">
-        <div class="quiz-header">
-            <h1 class="quiz-header__title">Interactive Quiz</h1>
-            <p class="quiz-header__description">
-                Test your knowledge with this quiz. After submission, you'll see your results with correct and incorrect answers highlighted.
-                <br>
-                This is a work from Ha Minh Tri - ITCSIU22194. The purpose of this website page is to prepare for midterm examination.
-            </p>
-            
-            <hr>
 
-            <div class="pdf-container">
-                <div class="pdf-title">
-                    Midterm Preparation Materials
-                </div>
+            .pdf-title {
+                font-size: 16px;
+                font-weight: 500;
+                margin-bottom: 10px;
+                color: #202124;
+            }
+
+            .question {
+                margin-bottom: 25px;
+                padding: 20px;
+                border: 1px solid #dadce0;
+                border-radius: 8px;
+                transition: all 0.3s ease;
+            }
+
+            .question--correct {
+                border-left: 4px solid #34a853;
+                background-color: #e6f4ea;
+            }
+
+            .question--incorrect {
+                border-left: 4px solid #ea4335;
+                background-color: #fce8e6;
+            }
+
+            .question__text {
+                font-size: 16px;
+                font-weight: 500;
+                color: #202124;
+                margin-bottom: 15px;
+            }
+
+            .option {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                padding: 8px;
+                border-radius: 4px;
+            }
+
+            .option--correct {
+                background-color: #e6f4ea;
+            }
+
+            .option--incorrect {
+                background-color: #fce8e6;
+            }
+
+            .option__input {
+                margin-right: 10px;
+                width: 16px;
+                height: 16px;
+            }
+
+            .option__label {
+                font-size: 14px;
+                color: #3c4043;
+                transition: all 0.3s ease;
+            }
+
+            .option__label--correct {
+                color: #0d652d;
+                font-weight: 500;
+            }
+
+            .option__label--incorrect {
+                color: #d33426;
+                font-weight: 500;
+            }
+
+            .form-actions {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 30px;
+            }
+
+            .button {
+                padding: 10px 24px;
+                border-radius: 4px;
+                font-size: 14px;
+                font-weight: 500;
+                cursor: pointer;
+                border: none;
+                transition: background-color 0.3s;
+            }
+
+            .button--submit {
+                background-color: #1a73e8;
+                color: white;
+            }
+
+            .button--submit:hover {
+                background-color: #1765cc;
+            }
+
+            .button--reset {
+                background-color: #f1f3f4;
+                color: #3c4043;
+            }
+
+            .button--reset:hover {
+                background-color: #e8eaed;
+            }
+
+            .loading {
+                text-align: center;
+                padding: 20px;
+                font-size: 18px;
+                color: #5f6368;
+            }
+
+            .error-message {
+                color: #d93025;
+                text-align: center;
+                padding: 20px;
+                font-size: 16px;
+            }
+
+            @media (max-width: 600px) {
+                .form-container {
+                    padding: 15px;
+                }
+
+                .form-actions {
+                    flex-direction: column;
+                }
+
+                .button {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+
+                .pdf-embed {
+                    height: 300px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="form-container">
+            <div class="quiz-header">
+                <h1 class="quiz-header__title">Interactive Quiz</h1>
                 <p class="quiz-header__description">
-                    Here are some questions in the previous midterm exam. Thanks to Do Hung Viet - ITCSIU22197.
+                    Test your knowledge with this quiz. After submission, you'll see your results with correct and incorrect answers highlighted.
+                    <br>
+                    This is a work from Ha Minh Tri - ITCSIU22194. The purpose of this website page is to prepare for midterm examination.
                 </p>
-                <embed class="pdf-embed" src="./sources/ITCSIU22197_DoHungViet_Entrepreneurship_MidtermExam_01.pdf" type="application/pdf">
-                    <hr>
-                <embed class="pdf-embed" src="./sources/ITCSIU22197_DoHungViet_Entrepreneurship_MidtermExam_02.pdf" type="application/pdf">
+                
+                <hr>
+
+                <div class="pdf-container">
+                    <div class="pdf-title">
+                        Midterm Preparation Materials
+                    </div>
+                    <p class="quiz-header__description">
+                        Here are some questions in the previous midterm exam. Thanks to Do Hung Viet - ITCSIU22197.
+                    </p>
+                    <embed class="pdf-embed" src="./sources/ITCSIU22197_DoHungViet_Entrepreneurship_MidtermExam_01.pdf" type="application/pdf">
+                        <hr>
+                    <embed class="pdf-embed" src="./sources/ITCSIU22197_DoHungViet_Entrepreneurship_MidtermExam_02.pdf" type="application/pdf">
+                </div>
+                
+                <div class="quiz-score-display" id="quizScoreDisplay">Quiz Results: <span id="scoreValue">0</span> out of <span id="totalQuestions">0</span> correct</div>
             </div>
-            
-            <div class="quiz-score-display" id="quizScoreDisplay">Quiz Results: <span id="scoreValue">0</span> out of <span id="totalQuestions">0</span> correct</div>
+
+            <div class="loading" id="loadingIndicator">Loading questions...</div>
+            <div class="error-message" id="errorMessage" style="display: none;"></div>
+
+            <form id="quizForm" style="display: none;"></form>
+
+            <div class="form-actions" id="formActions" style="display: none;">
+                <button type="button" class="button button--reset" id="resetBtn">Clear Form</button>
+                <button type="submit" class="button button--submit" id="submitBtn">Submit</button>
+            </div>
         </div>
 
-        <div class="loading" id="loadingIndicator">Loading questions...</div>
-        <div class="error-message" id="errorMessage" style="display: none;"></div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const quizForm = document.getElementById('quizForm');
+                const submitBtn = document.getElementById('submitBtn');
+                const resetBtn = document.getElementById('resetBtn');
+                const loadingIndicator = document.getElementById('loadingIndicator');
+                const errorMessage = document.getElementById('errorMessage');
+                const formActions = document.getElementById('formActions');
+                const quizScoreDisplay = document.getElementById('quizScoreDisplay');
+                const scoreValue = document.getElementById('scoreValue');
+                const totalQuestions = document.getElementById('totalQuestions');
 
-        <form id="quizForm" style="display: none;"></form>
+                let quizData = [];
+                let currentQuestionOrder = [];
 
-        <div class="form-actions" id="formActions" style="display: none;">
-            <button type="button" class="button button--reset" id="resetBtn">Clear Form</button>
-            <button type="submit" class="button button--submit" id="submitBtn">Submit</button>
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const quizForm = document.getElementById('quizForm');
-            const submitBtn = document.getElementById('submitBtn');
-            const resetBtn = document.getElementById('resetBtn');
-            const loadingIndicator = document.getElementById('loadingIndicator');
-            const errorMessage = document.getElementById('errorMessage');
-            const formActions = document.getElementById('formActions');
-            const quizScoreDisplay = document.getElementById('quizScoreDisplay');
-            const scoreValue = document.getElementById('scoreValue');
-            const totalQuestions = document.getElementById('totalQuestions');
-
-            let quizData = [];
-            let currentQuestionOrder = [];
-
-            function scrollToResults() {
-                const resultsElement = document.getElementById('quizScoreDisplay');
-                if (resultsElement) {
-                    resultsElement.scrollIntoView({ 
-                        behavior: 'smooth',
-                        block: 'start' 
-                    });
-                }
-            }
-
-            function scrollToFirstQuestion() {
-                const firstQuestion = document.querySelector('.question');
-                if (firstQuestion) {
-                    firstQuestion.scrollIntoView({ 
-                        behavior: 'smooth',
-                        block: 'start' 
-                    });
-                }
-            }
-
-            function shuffleArray(array) {
-                const newArray = [...array];
-                for (let i = newArray.length - 1; i > 0; i--) {
-                    const j = Math.floor(Math.random() * (i + 1));
-                    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-                }
-                return newArray;
-            }
-
-            async function loadQuizData() {
-                try {
-                    const response = await fetch('questions.json');
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
+                function scrollToResults() {
+                    const resultsElement = document.getElementById('quizScoreDisplay');
+                    if (resultsElement) {
+                        resultsElement.scrollIntoView({ 
+                            behavior: 'smooth',
+                            block: 'start' 
+                        });
                     }
-                    quizData = await response.json();
-                    currentQuestionOrder = Array.from({length: quizData.length}, (_, i) => i);
-                    
-                    loadingIndicator.style.display = 'none';
-                    quizForm.style.display = 'block';
-                    formActions.style.display = 'flex';
-                    
-                    renderQuiz();
-                } catch (error) {
-                    console.error('Error loading quiz data:', error);
-                    loadingIndicator.style.display = 'none';
-                    errorMessage.textContent = 'Failed to load questions. Please try again later.';
-                    errorMessage.style.display = 'block';
                 }
-            }
 
-            function renderQuiz() {
-                quizForm.innerHTML = '';
-                
-                currentQuestionOrder.forEach((questionIndex, displayIndex) => {
-                    const questionData = quizData[questionIndex];
-                    const questionElement = document.createElement('div');
-                    questionElement.className = 'question';
-                    questionElement.id = `question-${questionIndex}`;
-                    
-                    const questionText = document.createElement('div');
-                    questionText.className = 'question__text';
-                    questionText.textContent = `${displayIndex + 1}. ${questionData.question}`;
-                    
-                    questionElement.appendChild(questionText);
-                    
-                    questionData.options.forEach((option, optionIndex) => {
-                        const optionId = `q${questionIndex}-option${optionIndex}`;
-                        
-                        const optionContainer = document.createElement('div');
-                        optionContainer.className = 'option';
-                        
-                        const input = document.createElement('input');
-                        input.type = 'radio';
-                        input.className = 'option__input';
-                        input.name = `question-${questionIndex}`;
-                        input.id = optionId;
-                        input.value = option;
-                        
-                        const label = document.createElement('label');
-                        label.className = 'option__label';
-                        label.htmlFor = optionId;
-                        label.textContent = option;
-                        label.dataset.optionValue = option;
-                        
-                        optionContainer.appendChild(input);
-                        optionContainer.appendChild(label);
-                        questionElement.appendChild(optionContainer);
-                    });
-                    
-                    quizForm.appendChild(questionElement);
-                });
-                totalQuestions.textContent = quizData.length;
-            }
-
-            function highlightAnswers(questionIndex, selectedOption, correctAnswer) {
-                const questionElement = document.getElementById(`question-${questionIndex}`);
-                const optionContainers = questionElement.querySelectorAll('.option');
-                const optionLabels = questionElement.querySelectorAll('.option__label');
-                
-                optionContainers.forEach(container => {
-                    container.classList.remove('option--correct', 'option--incorrect');
-                });
-                
-                optionLabels.forEach(label => {
-                    label.classList.remove('option__label--correct', 'option__label--incorrect');
-                    
-                    if (label.dataset.optionValue === correctAnswer) {
-                        label.classList.add('option__label--correct');
-                        label.closest('.option').classList.add('option--correct');
+                function scrollToFirstQuestion() {
+                    const firstQuestion = document.querySelector('.question');
+                    if (firstQuestion) {
+                        firstQuestion.scrollIntoView({ 
+                            behavior: 'smooth',
+                            block: 'start' 
+                        });
                     }
-                    
-                    if (selectedOption && label.dataset.optionValue === selectedOption.value && selectedOption.value !== correctAnswer) {
-                        label.classList.add('option__label--incorrect');
-                        label.closest('.option').classList.add('option--incorrect');
-                    }
-                });
-            }
+                }
 
-            function showResults() {
-                let score = 0;
-                
-                currentQuestionOrder.forEach((questionIndex) => {
-                    const questionData = quizData[questionIndex];
-                    const questionElement = document.getElementById(`question-${questionIndex}`);
-                    const selectedOption = document.querySelector(`input[name="question-${questionIndex}"]:checked`);
-                    
-                    questionElement.classList.remove('question--correct', 'question--incorrect');
-                    
-                    if (selectedOption) {
-                        const isCorrect = selectedOption.value === questionData.correctAnswer;
-                        
-                        if (isCorrect) {
-                            score++;
-                            questionElement.classList.add('question--correct');
-                        } else {
-                            questionElement.classList.add('question--incorrect');
+                function shuffleArray(array) {
+                    const newArray = [...array];
+                    for (let i = newArray.length - 1; i > 0; i--) {
+                        const j = Math.floor(Math.random() * (i + 1));
+                        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+                    }
+                    return newArray;
+                }
+
+                async function loadQuizData() {
+                    try {
+                        const response = await fetch('questions.json');
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
                         }
+                        quizData = await response.json();
+                        currentQuestionOrder = Array.from({length: quizData.length}, (_, i) => i);
                         
-                        highlightAnswers(questionIndex, selectedOption, questionData.correctAnswer);
-                    } else {
-                        questionElement.classList.add('question--incorrect');
-                        highlightAnswers(questionIndex, null, questionData.correctAnswer);
+                        loadingIndicator.style.display = 'none';
+                        quizForm.style.display = 'block';
+                        formActions.style.display = 'flex';
+                        
+                        renderQuiz();
+                    } catch (error) {
+                        console.error('Error loading quiz data:', error);
+                        loadingIndicator.style.display = 'none';
+                        errorMessage.textContent = 'Failed to load questions. Please try again later.';
+                        errorMessage.style.display = 'block';
                     }
-                });
-                
-                scoreValue.textContent = score;
-                quizScoreDisplay.style.display = 'block';
-                
-                // Scroll to results (below PDFs)
-                scrollToResults();
-            }
+                }
 
-            function resetForm() {
-                currentQuestionOrder = shuffleArray(Array.from({length: quizData.length}, (_, i) => i));
-                renderQuiz();
-                quizForm.reset();
-                quizScoreDisplay.style.display = 'none';
-                currentQuestionOrder.forEach(questionIndex => {
+                function renderQuiz() {
+                    quizForm.innerHTML = '';
+                    
+                    currentQuestionOrder.forEach((questionIndex, displayIndex) => {
+                        const questionData = quizData[questionIndex];
+                        const questionElement = document.createElement('div');
+                        questionElement.className = 'question';
+                        questionElement.id = `question-${questionIndex}`;
+                        
+                        const questionText = document.createElement('div');
+                        questionText.className = 'question__text';
+                        questionText.textContent = `${displayIndex + 1}. ${questionData.question}`;
+                        
+                        questionElement.appendChild(questionText);
+                        
+                        const isMultipleChoice = Array.isArray(questionData.correctAnswer);
+                        const inputType = isMultipleChoice ? 'checkbox' : 'radio';
+                        
+                        questionData.options.forEach((option, optionIndex) => {
+                            const optionId = `q${questionIndex}-option${optionIndex}`;
+                            
+                            const optionContainer = document.createElement('div');
+                            optionContainer.className = 'option';
+                            
+                            const input = document.createElement('input');
+                            input.type = inputType;
+                            input.className = 'option__input';
+                            input.name = `question-${questionIndex}`;
+                            input.id = optionId;
+                            input.value = option;
+                            
+                            const label = document.createElement('label');
+                            label.className = 'option__label';
+                            label.htmlFor = optionId;
+                            label.textContent = option;
+                            label.dataset.optionValue = option;
+                            
+                            optionContainer.appendChild(input);
+                            optionContainer.appendChild(label);
+                            questionElement.appendChild(optionContainer);
+                        });
+                        
+                        quizForm.appendChild(questionElement);
+                    });
+                    totalQuestions.textContent = quizData.length;
+                }
+
+                function highlightAnswers(questionIndex, selectedOptions, correctAnswers) {
                     const questionElement = document.getElementById(`question-${questionIndex}`);
-                    questionElement.classList.remove('question--correct', 'question--incorrect');
                     const optionContainers = questionElement.querySelectorAll('.option');
                     const optionLabels = questionElement.querySelectorAll('.option__label');
                     
@@ -429,18 +368,105 @@
                     
                     optionLabels.forEach(label => {
                         label.classList.remove('option__label--correct', 'option__label--incorrect');
+                        
+                        const optionValue = label.dataset.optionValue;
+                        const isCorrect = Array.isArray(correctAnswers) 
+                            ? correctAnswers.includes(optionValue)
+                            : optionValue === correctAnswers;
+                        
+                        if (isCorrect) {
+                            label.classList.add('option__label--correct');
+                            label.closest('.option').classList.add('option--correct');
+                        }
+                        
+                        const isSelected = selectedOptions.some(opt => opt.value === optionValue);
+                        if (isSelected && !isCorrect) {
+                            label.classList.add('option__label--incorrect');
+                            label.closest('.option').classList.add('option--incorrect');
+                        }
                     });
-                });
-                
-                // Scroll to first question
-                scrollToFirstQuestion();
-            }
+                }
 
-            submitBtn.addEventListener('click', showResults);
-            resetBtn.addEventListener('click', resetForm);
+                function showResults() {
+                    let score = 0;
+                    
+                    currentQuestionOrder.forEach((questionIndex) => {
+                        const questionData = quizData[questionIndex];
+                        const questionElement = document.getElementById(`question-${questionIndex}`);
+                        const inputs = document.querySelectorAll(`input[name="question-${questionIndex}"]:checked`);
+                        const selectedOptions = Array.from(inputs);
+                        
+                        questionElement.classList.remove('question--correct', 'question--incorrect');
+                        
+                        const isMultipleChoice = Array.isArray(questionData.correctAnswer);
+                        const correctAnswers = isMultipleChoice 
+                            ? questionData.correctAnswer 
+                            : [questionData.correctAnswer];
+                        
+                        if (selectedOptions.length > 0) {
+                            const selectedValues = selectedOptions.map(opt => opt.value);
+                            let isCorrect;
+                            
+                            if (isMultipleChoice) {
+                                // For multiple choice, all correct answers must be selected and no incorrect ones
+                                const allCorrectSelected = correctAnswers.every(ans => 
+                                    selectedValues.includes(ans));
+                                const noIncorrectSelected = selectedValues.every(val => 
+                                    correctAnswers.includes(val));
+                                isCorrect = allCorrectSelected && noIncorrectSelected;
+                            } else {
+                                // For single choice, just check if the selected value is correct
+                                isCorrect = selectedValues[0] === questionData.correctAnswer;
+                            }
+                            
+                            if (isCorrect) {
+                                score++;
+                                questionElement.classList.add('question--correct');
+                            } else {
+                                questionElement.classList.add('question--incorrect');
+                            }
+                            
+                            highlightAnswers(questionIndex, selectedOptions, correctAnswers);
+                        } else {
+                            questionElement.classList.add('question--incorrect');
+                            highlightAnswers(questionIndex, [], correctAnswers);
+                        }
+                    });
+                    
+                    scoreValue.textContent = score;
+                    quizScoreDisplay.style.display = 'block';
 
-            loadQuizData();
-        });
-    </script>
-</body>
+                    scrollToResults();
+                }
+
+                function resetForm() {
+                    currentQuestionOrder = shuffleArray(Array.from({length: quizData.length}, (_, i) => i));
+                    renderQuiz();
+                    quizForm.reset();
+                    quizScoreDisplay.style.display = 'none';
+                    currentQuestionOrder.forEach(questionIndex => {
+                        const questionElement = document.getElementById(`question-${questionIndex}`);
+                        questionElement.classList.remove('question--correct', 'question--incorrect');
+                        const optionContainers = questionElement.querySelectorAll('.option');
+                        const optionLabels = questionElement.querySelectorAll('.option__label');
+                        
+                        optionContainers.forEach(container => {
+                            container.classList.remove('option--correct', 'option--incorrect');
+                        });
+                        
+                        optionLabels.forEach(label => {
+                            label.classList.remove('option__label--correct', 'option__label--incorrect');
+                        });
+                    });
+
+                    scrollToFirstQuestion();
+                }
+
+                submitBtn.addEventListener('click', showResults);
+                resetBtn.addEventListener('click', resetForm);
+
+                loadQuizData();
+            });
+        </script>
+    </body>
 </html>
