@@ -259,6 +259,26 @@
             let quizData = [];
             let currentQuestionOrder = [];
 
+            function scrollToResults() {
+                const resultsElement = document.getElementById('quizScoreDisplay');
+                if (resultsElement) {
+                    resultsElement.scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start' 
+                    });
+                }
+            }
+
+            function scrollToFirstQuestion() {
+                const firstQuestion = document.querySelector('.question');
+                if (firstQuestion) {
+                    firstQuestion.scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start' 
+                    });
+                }
+            }
+
             function shuffleArray(array) {
                 const newArray = [...array];
                 for (let i = newArray.length - 1; i > 0; i--) {
@@ -360,8 +380,6 @@
 
             function showResults() {
                 let score = 0;
-
-                window.scrollTo({ top: 0, behavior: 'smooth' });
                 
                 currentQuestionOrder.forEach((questionIndex) => {
                     const questionData = quizData[questionIndex];
@@ -389,6 +407,9 @@
                 
                 scoreValue.textContent = score;
                 quizScoreDisplay.style.display = 'block';
+                
+                // Scroll to results (below PDFs)
+                scrollToResults();
             }
 
             function resetForm() {
@@ -410,7 +431,9 @@
                         label.classList.remove('option__label--correct', 'option__label--incorrect');
                     });
                 });
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                
+                // Scroll to first question
+                scrollToFirstQuestion();
             }
 
             submitBtn.addEventListener('click', showResults);
