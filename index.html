@@ -320,8 +320,6 @@
                 let score = 0;
                 resultsDetails.innerHTML = '';
                 
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-                
                 currentQuestionOrder.forEach((questionIndex, displayIndex) => {
                     const questionData = quizData[questionIndex];
                     const questionElement = document.getElementById(`question-${questionIndex}`);
@@ -420,6 +418,9 @@
                         });
                     }
                 });
+                
+                // Scroll to top after resetting
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             }
 
             submitBtn.addEventListener('click', showResults);
