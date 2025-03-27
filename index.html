@@ -337,6 +337,7 @@
 
                 let quizData = [];
                 let currentQuestionOrder = [];
+                let currentOptionOrders = {}; // Stores shuffled option orders for each question
 
                 function scrollToResults() {
                     const resultsElement = document.getElementById('quizScoreDisplay');
@@ -367,6 +368,13 @@
                     return newArray;
                 }
 
+                function generateOptionOrder(questionIndex) {
+                    // Generate a new random order for options of a question
+                    const question = quizData[questionIndex];
+                    const optionIndices = Array.from({length: question.options.length}, (_, i) => i);
+                    return shuffleArray(optionIndices);
+                }
+
                 async function loadQuizData() {
                     try {
                         const response = await fetch('questions.json');
@@ -374,7 +382,9 @@
                             throw new Error(`HTTP error! status: ${response.status}`);
                         }
                         quizData = await response.json();
-                        currentQuestionOrder = Array.from({length: quizData.length}, (_, i) => i);
+                        
+                        // Initialize question and option orders
+                        resetQuestionAndOptionOrders();
                         
                         loadingIndicator.style.display = 'none';
                         quizForm.style.display = 'block';
@@ -387,6 +397,17 @@
                         errorMessage.textContent = 'Failed to load questions. Please try again later.';
                         errorMessage.style.display = 'block';
                     }
+                }
+
+                function resetQuestionAndOptionOrders() {
+                    // Shuffle question order
+                    currentQuestionOrder = shuffleArray(Array.from({length: quizData.length}, (_, i) => i));
+                    
+                    // Shuffle option orders for all questions
+                    currentOptionOrders = {};
+                    quizData.forEach((_, index) => {
+                        currentOptionOrders[index] = generateOptionOrder(index);
+                    });
                 }
 
                 function renderQuiz() {
@@ -407,7 +428,12 @@
                         const isMultipleChoice = Array.isArray(questionData.correctAnswer);
                         const inputType = isMultipleChoice ? 'checkbox' : 'radio';
                         
-                        questionData.options.forEach((option, optionIndex) => {
+                        // Get the shuffled option order for this question
+                        const optionOrder = currentOptionOrders[questionIndex];
+                        
+                        // Render options in the shuffled order
+                        optionOrder.forEach(optionIndex => {
+                            const option = questionData.options[optionIndex];
                             const optionId = `q${questionIndex}-option${optionIndex}`;
                             
                             const optionContainer = document.createElement('div');
@@ -425,6 +451,7 @@
                             label.htmlFor = optionId;
                             label.textContent = option;
                             label.dataset.optionValue = option;
+                            label.dataset.originalIndex = optionIndex;
                             
                             optionContainer.appendChild(input);
                             optionContainer.appendChild(label);
@@ -520,10 +547,17 @@
                 }
 
                 function resetForm() {
-                    currentQuestionOrder = shuffleArray(Array.from({length: quizData.length}, (_, i) => i));
+                    // Reset both question order and option orders for all questions
+                    resetQuestionAndOptionOrders();
+                    
+                    // Re-render the quiz with new orders
                     renderQuiz();
+                    
+                    // Reset form state
                     quizForm.reset();
                     quizScoreDisplay.style.display = 'none';
+                    
+                    // Remove all highlighting
                     currentQuestionOrder.forEach(questionIndex => {
                         const questionElement = document.getElementById(`question-${questionIndex}`);
                         questionElement.classList.remove('question--correct', 'question--incorrect');
