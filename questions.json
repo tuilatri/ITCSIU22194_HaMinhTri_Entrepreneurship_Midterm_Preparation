@@ -408,5 +408,97 @@
             "To guarantee a perfect product launch"
         ],
         "correctAnswer": "To ensure the idea aligns with market needs and demands"
-    }
+    },
+    [
+        {
+            "question": "3.5.1. Person who works within an organization and has entrepreneurial capabilities is:",
+            "options": [
+                "entrepreneur",
+                "manager",
+                "intrapreneur",
+                "chief executive"
+            ],
+            "correctAnswer": "intrapreneur"
+        },
+        {
+            "question": "3.5.2. Which could provide an individual with the motivation to start a new business venture?",
+            "options": [
+                "Desire for independence",
+                "Exploit an opportunity",
+                "Financial Incentive",
+                "Being without a job"
+            ],
+            "correctAnswer": [
+                "Desire for independence",
+                "Exploit an opportunity",
+                "Financial Incentive",
+                "Being without a job"
+            ]
+        },
+        {
+            "question": "3.5.3. A business arrangement where one party allows another party to use a business name and sell its products or services is known as __.",
+            "options": [
+                "An owner-manager business",
+                "A franchise",
+                "A limited company",
+                "A cooperative"
+            ],
+            "correctAnswer": "A franchise"
+        },
+        {
+            "question": "3.5.4. “How might we find a way to make use of DVDs and other physical media as users adopt streaming services for films and television over time?”",
+            "options": [
+                "statement starter",
+                "open innovation",
+                "design thinking",
+                "brainstorming"
+            ],
+            "correctAnswer": "statement starter"
+        },
+        {
+            "question": "3.5.5. DICEE is a model for ____.",
+            "options": [
+                "creativity in practice",
+                "innovative products",
+                "inventions",
+                "building creative teams"
+            ],
+            "correctAnswer": "innovative products"
+        },
+        {
+            "question": "3.5.6. Innovation includes:",
+            "options": [
+                "Open a new market",
+                "Present a new product",
+                "Introduce a new service",
+                "Changes of existing products"
+            ],
+            "correctAnswer": [
+                "Open a new market",
+                "Present a new product",
+                "Introduce a new service",
+                "Changes of existing products"
+            ]
+        },
+        {
+            "question": "3.5.7. ____ is thinking strategically, often to create human-centered products.",
+            "options": [
+                "Innovation",
+                "Invention",
+                "Design thinking",
+                "Creativity"
+            ],
+            "correctAnswer": "Design thinking"
+        },
+        {
+            "question": "3.5.8. In the Six Hats exercise, new ideas are the purview of the ____.",
+            "options": [
+                "Black Hat",
+                "Blue Hat",
+                "Green Hat",
+                "Red Hat"
+            ],
+            "correctAnswer": "Green Hat"
+        }
+    ]    
 ]
